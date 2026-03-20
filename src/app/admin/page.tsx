@@ -111,7 +111,7 @@ export default function KitchenDashboard() {
             <span className="bg-green-200 text-green-800 text-xs font-bold px-2 py-1 rounded-full">{readyOrders.length}</span>
           </div>
           <div className="flex-1 overflow-y-auto pr-1">
-            {readyOrders.map(o => renderOrderCard(o, null as any, '', ''))}
+            {readyOrders.map(o => renderOrderCard(o, null as unknown as Order['status'], '', ''))}
             {readyOrders.length === 0 && <p className="text-center text-green-400/60 mt-10 text-sm">No hay pedidos listos</p>}
           </div>
         </div>

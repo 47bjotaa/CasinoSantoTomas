@@ -53,8 +53,12 @@ export default function CheckoutPage() {
       db.createOrder(newOrder); // This enforces the capacity limit throwing error if full
       clearCart();
       router.push(`/order/${orderId}`);
-    } catch (err: any) {
-      setError(err.message || 'Error al procesar el pedido.');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('Error al procesar el pedido.');
+      }
     }
   };
 
