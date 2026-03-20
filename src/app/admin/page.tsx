@@ -35,7 +35,7 @@ export default function KitchenDashboard() {
           <span className="bg-gray-100 text-gray-800 text-xs font-bold px-2 py-1 rounded inline-block mb-1">
             {order.pickup_time_slot}
           </span>
-          <h3 className="font-黑text-gray-900 text-lg">#{order.order_number}</h3>
+          <h3 className="font-black text-gray-900 text-lg">#{order.order_number}</h3>
           <p className="text-xs text-gray-500">{order.user_name}</p>
         </div>
       </div>
